@@ -9,6 +9,6 @@
   Leave sheetId empty to show the built-in sample content (data/fallback.json).
 */
 window.GCI_CONFIG = {
-  sheetId: "",          // e.g. "1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789"
+  sheetId: "1npP5LiNuwMhw8-_fjCu9Qiia-a-z4y3YV8HVtqTw33s",          // e.g. "1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789"
   cacheMinutes: 5       // how long visitors' browsers keep the sheet data before re-checking
 };
