@@ -1,0 +1,54 @@
+Last updated: 14 October 2026
+
+This Privacy Policy explains how Oak Sprouts ("we", "us", "our"), which operates the giftcityinvesting website (the "Website"), collects, uses and protects your personal data. For the purposes of the Digital Personal Data Protection Act, 2023 and the rules made under it (together, the "DPDP law"), we act as the data fiduciary for the personal data collected through the Website.
+
+# 1. What we collect
+- Information you give us: your name, email address, phone number, the topic you are interested in, your accreditation route (if you apply) and the message you write in our contact or application forms.
+- Technical information: our hosting provider may process your IP address, browser type, device information and the pages you request in server logs, for security and performance.
+- Browser storage: to load faster, your browser keeps a saved copy of the Website's content (this is not your personal data) in its local storage. We do not currently use advertising or tracking cookies. If we add analytics or cookies later, we will update this policy.
+We do not intentionally collect sensitive information such as PAN, Aadhaar, bank-account or card details through the Website. Please do not send them through our forms. If we need them, we will ask you through a secure channel.
+
+# 2. Why we use your data
+- To reply to your enquiry and guide you on funds, routes and accreditation.
+- To process an application that you choose to start.
+- To send you information you have asked for.
+- To keep the Website secure and to prevent misuse.
+- To comply with legal, regulatory and accounting obligations.
+- To understand what visitors find useful and improve our content.
+
+# 3. Consent
+We process your personal data based on your consent, which you give by agreeing to this policy and submitting a form. You can withdraw your consent at any time by writing to us. Withdrawal does not affect processing done before it, and we may need to keep some data where the law requires.
+
+# 4. Who we share it with
+- Service providers that help us run the Website and store your enquiries, such as Google (Google Workspace, including Sheets and Apps Script), Cloudflare (hosting and security) and Canva (presentations you choose to view). They process data on our behalf and under their own security commitments.
+- Fund houses, asset managers, distributors or advisers, but only when you ask us to introduce you or process an application with them, or where you otherwise consent.
+- Courts, regulators and authorities, where the law requires.
+We do not sell your personal data.
+
+# 5. Storage, transfers and retention
+Our service providers may store data on servers outside India. We keep enquiry data only for as long as needed for the purpose it was collected, to meet legal, regulatory or accounting needs, or until you ask us to delete it, subject to the law. [Add your retention period here, for example 24 months from your last enquiry.]
+
+# 6. Security
+We use reasonable safeguards to protect your data, including restricted access to the sheets where enquiries are stored and encrypted (HTTPS) connections. No method of transmission over the internet is completely secure, so we cannot guarantee absolute security.
+
+# 7. Your rights
+Under the DPDP law you may:
+- ask for a summary of the personal data we hold and how we process it;
+- ask us to correct, complete or update your data;
+- ask us to erase your data, subject to legal requirements;
+- withdraw your consent;
+- have your grievance addressed; and
+- nominate another person to exercise your rights if you die or become unable to do so.
+To use any of these rights, write to the email address in section 11.
+
+# 8. Children
+The Website is not meant for people under 18, and we do not knowingly collect personal data of children. If you believe a child has sent us data, please tell us and we will delete it.
+
+# 9. Third-party links and embeds
+The Website links to and embeds third-party content (for example Canva presentations and fund-house websites). Those parties have their own privacy practices, which we do not control. Please read their policies.
+
+# 10. Changes to this policy
+We may update this policy from time to time. The "Last updated" date above shows the latest version.
+
+# 11. Grievance and contact
+For questions, requests or complaints about your personal data, contact our Grievance Officer: [Name of Grievance Officer], Oak Sprouts, 101, Aairah Terrazo,17, Shankar Sheth Road, Pune 411002. Email: team.oaksprouts@gmail.com. Phone: +91 77889 90390. We will respond within a reasonable period and in any case within the time required by law.

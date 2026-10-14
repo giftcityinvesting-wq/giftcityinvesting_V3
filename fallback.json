@@ -1,0 +1,1355 @@
+{
+ "Settings": [
+  {
+   "key": "site_name",
+   "value": "GIFT City Investing",
+   "notes": "Shown in the nav bar, footer and browser tab."
+  },
+  {
+   "key": "tagline",
+   "value": "India's gateway to global finance.",
+   "notes": "Used in the browser tab title and as the default description."
+  },
+  {
+   "key": "footer_description",
+   "value": "Discover GIFT City, inbound and outbound funds, investment routes and tax benefits in one place.",
+   "notes": "Paragraph under the logo in the footer."
+  },
+  {
+   "key": "announcement",
+   "value": "",
+   "notes": "Leave blank for no banner. Any text here shows a banner at the top of every page."
+  },
+  {
+   "key": "email",
+   "value": "team.oaksprouts@gmail.com",
+   "notes": ""
+  },
+  {
+   "key": "phone",
+   "value": "+91 77889 90390",
+   "notes": ""
+  },
+  {
+   "key": "whatsapp_number",
+   "value": "917788990390",
+   "notes": "Digits only, with country code, no + sign."
+  },
+  {
+   "key": "address",
+   "value": "101, Aairah Terrazo,17, Shankar Sheth Road,Pune 411002",
+   "notes": ""
+  },
+  {
+   "key": "copyright",
+   "value": "© 2026 Oak Sprouts. All rights reserved.",
+   "notes": ""
+  },
+  {
+   "key": "form_endpoint",
+   "value": "",
+   "notes": "Paste your Google Apps Script web-app URL here (ends with /exec) so form submissions land in your private Leads sheet. Leave blank to open the visitor's email app instead."
+  },
+  {
+   "key": "disclaimer",
+   "value": "Investments are subject to market risks. This website is for information only and is not investment, tax or legal advice. Please consult your advisor before investing.",
+   "notes": "Small print in the footer and under tables."
+  },
+  {
+   "key": "logo_nav",
+   "value": "",
+   "notes": "Logo for the DARK top bar (use a white/light version). Paste a Google Drive share link or any image URL. Blank = built-in mark + site name."
+  },
+  {
+   "key": "logo_footer",
+   "value": "",
+   "notes": "Logo for the LIGHT footer (use a dark/coloured version). Blank = built-in mark + site name."
+  },
+  {
+   "key": "logo_show_name",
+   "value": "no",
+   "notes": "When you use a logo image: yes = also show the site name text next to it, no = logo only."
+  },
+  {
+   "key": "favicon",
+   "value": "",
+   "notes": "Optional. Square PNG (512x512). Easiest and most reliable: replace the file assets/favicon.png in GitHub instead."
+  },
+  {
+   "key": "og_image",
+   "value": "",
+   "notes": "Optional. Image (1200x630) shown when your link is shared. Blank = assets/og-default.png."
+  }
+ ],
+ "Content": [
+  {
+   "key": "hero_eyebrow",
+   "value": "GIFT City · India's International Financial Services Centre"
+  },
+  {
+   "key": "hero_title",
+   "value": "Where India meets the world's capital."
+  },
+  {
+   "key": "hero_subtitle",
+   "value": "GIFT City is home. One gateway for global investors, funds, banks and businesses to access India, and for Indians to invest around the world."
+  },
+  {
+   "key": "hero_cta_primary_label",
+   "value": "Explore GIFT City"
+  },
+  {
+   "key": "hero_cta_primary_link",
+   "value": "/presentations"
+  },
+  {
+   "key": "hero_cta_secondary_label",
+   "value": "Talk to us"
+  },
+  {
+   "key": "hero_cta_secondary_link",
+   "value": "/contact"
+  },
+  {
+   "key": "about_eyebrow",
+   "value": "What is GIFT City"
+  },
+  {
+   "key": "about_title",
+   "value": "A global financial hub, built in India."
+  },
+  {
+   "key": "about_text",
+   "value": "GIFT City (Gujarat International Finance Tec-City) hosts India's first International Financial Services Centre. It lets funds, banks, insurers and businesses operate in a globally benchmarked environment, regulated by a single unified regulator, IFSCA.\nWatch the presentation to see how it works, who it is for and why it matters."
+  },
+  {
+   "key": "about_button",
+   "value": "Watch the GIFT City presentation"
+  },
+  {
+   "key": "benefits_eyebrow",
+   "value": "Benefits"
+  },
+  {
+   "key": "benefits_title",
+   "value": "Built for everyone in the ecosystem."
+  },
+  {
+   "key": "benefits_subtitle",
+   "value": "Choose who you are to see what GIFT City offers you."
+  },
+  {
+   "key": "timeline_eyebrow",
+   "value": "Timeline"
+  },
+  {
+   "key": "timeline_title",
+   "value": "The GIFT City journey."
+  },
+  {
+   "key": "timeline_subtitle",
+   "value": "From a bold idea to a thriving international financial centre."
+  },
+  {
+   "key": "funds_eyebrow",
+   "value": "Our funds"
+  },
+  {
+   "key": "funds_title",
+   "value": "Funds, curated for you."
+  },
+  {
+   "key": "funds_subtitle",
+   "value": "Inbound and outbound funds available through GIFT City."
+  },
+  {
+   "key": "presentations_eyebrow",
+   "value": "Presentations"
+  },
+  {
+   "key": "presentations_title",
+   "value": "See the full picture."
+  },
+  {
+   "key": "presentations_subtitle",
+   "value": "Short, visual presentations on GIFT City, global investing and each fund."
+  },
+  {
+   "key": "cta_title",
+   "value": "Ready to invest through GIFT City?"
+  },
+  {
+   "key": "cta_subtitle",
+   "value": "Speak with our team about funds, routes and tax benefits."
+  },
+  {
+   "key": "cta_button",
+   "value": "Get in touch"
+  },
+  {
+   "key": "inbound_eyebrow",
+   "value": "Inbound funds"
+  },
+  {
+   "key": "inbound_title",
+   "value": "Invest in India from GIFT City."
+  },
+  {
+   "key": "inbound_subtitle",
+   "value": "Funds that give global investors access to the India growth story, in a simple and regulated structure."
+  },
+  {
+   "key": "outbound_eyebrow",
+   "value": "Outbound funds"
+  },
+  {
+   "key": "outbound_title",
+   "value": "Invest globally from India."
+  },
+  {
+   "key": "outbound_subtitle",
+   "value": "Funds that let Indian investors diversify across global markets through GIFT City."
+  },
+  {
+   "key": "accreditation_eyebrow",
+   "value": "SEBI Accredited Investor Programme"
+  },
+  {
+   "key": "accreditation_title",
+   "value": "Step into *elite* investing, on better terms."
+  },
+  {
+   "key": "accreditation_subtitle",
+   "value": "Accreditation opens the door to PMS, AIF and SIF strategies at meaningfully lower entry points — vetted managers, unlisted opportunities, and a certificate that stays valid for years."
+  },
+  {
+   "key": "acc_cta_label",
+   "value": "Begin your application"
+  },
+  {
+   "key": "acc_seal_text",
+   "value": "Oak Sprouts · Accredited Investor ·"
+  },
+  {
+   "key": "acc_seal_center",
+   "value": "Certified Since Enrolment"
+  },
+  {
+   "key": "acc_what_eyebrow",
+   "value": "The basics"
+  },
+  {
+   "key": "acc_what_title",
+   "value": "What is accreditation"
+  },
+  {
+   "key": "acc_what_text",
+   "value": "Accreditation is SEBI's framework for recognising investors who meet defined income or net-worth thresholds, letting them participate in PMS, AIF and SIF products under a lighter-touch, more flexible regime — with meaningfully lower minimum ticket sizes."
+  },
+  {
+   "key": "acc_gateway_title",
+   "value": "Your gateway to *elite* opportunities"
+  },
+  {
+   "key": "acc_gateway_text",
+   "value": "Once accredited, the same manager-grade strategies that once required ₹50L–₹1Cr become accessible from a fraction of that — so you can build conviction before you scale."
+  },
+  {
+   "key": "acc_products_eyebrow",
+   "value": "Strategies open to accredited investors"
+  },
+  {
+   "key": "acc_criteria_eyebrow",
+   "value": "Do you qualify"
+  },
+  {
+   "key": "acc_criteria_title",
+   "value": "Three routes to accreditation"
+  },
+  {
+   "key": "acc_criteria_text",
+   "value": "Individuals, HUFs, family trusts and sole proprietorships qualify by meeting any one of the criteria below."
+  },
+  {
+   "key": "acc_steps_eyebrow",
+   "value": "Your path to accreditation"
+  },
+  {
+   "key": "acc_steps_title",
+   "value": "The process, in three steps"
+  },
+  {
+   "key": "acc_steps_text",
+   "value": "Applications are typically processed within 3 business days of submission."
+  },
+  {
+   "key": "acc_final_eyebrow",
+   "value": "Make the winning choice"
+  },
+  {
+   "key": "acc_final_title",
+   "value": "Apply today, invest with less tomorrow."
+  },
+  {
+   "key": "acc_form_title",
+   "value": "Start your application"
+  },
+  {
+   "key": "acc_form_text",
+   "value": "Share your details and our team will guide you to the right eligibility route and prepare your application."
+  },
+  {
+   "key": "acc_faq_eyebrow",
+   "value": "Frequently asked questions"
+  },
+  {
+   "key": "acc_faq_title",
+   "value": "A few things people ask us"
+  },
+  {
+   "key": "insights_eyebrow",
+   "value": "Insights"
+  },
+  {
+   "key": "insights_title",
+   "value": "Ideas & updates."
+  },
+  {
+   "key": "insights_subtitle",
+   "value": "Blogs, market notes and updates from the GIFT City ecosystem."
+  },
+  {
+   "key": "team_eyebrow",
+   "value": "Team"
+  },
+  {
+   "key": "team_title",
+   "value": "The people behind giftcityinvesting."
+  },
+  {
+   "key": "team_subtitle",
+   "value": "A team of finance and investing professionals."
+  },
+  {
+   "key": "contact_eyebrow",
+   "value": "Contact us"
+  },
+  {
+   "key": "contact_title",
+   "value": "Let's talk."
+  },
+  {
+   "key": "contact_subtitle",
+   "value": "Tell us what you are looking for and we will get back to you shortly."
+  },
+  {
+   "key": "terms_text",
+   "value": "Last updated: 14 October 2026\n\nThese Terms of Use (\"Terms\") govern your access to and use of the giftcityinvesting website (the \"Website\"), operated by Oak Sprouts (\"we\", \"us\", \"our\"). By using the Website you agree to these Terms. If you do not agree, please do not use the Website.\n\n# 1. About this Website\nThe Website provides general information about GIFT City (the International Financial Services Centre in Gandhinagar, Gujarat), inbound and outbound funds, investment routes, tax considerations, accreditation and related topics. It also lets you view presentations and articles and contact us.\n\n# 2. Not investment, tax or legal advice\n- All content is for general information and education only.\n- Nothing on the Website is an offer, invitation, solicitation, recommendation or advice to buy, sell or subscribe to any security, fund or product, or to adopt any tax or legal position.\n- Tax treatment depends on your individual circumstances and may change. Please consult a qualified investment adviser, chartered accountant or lawyer before you act.\n- [Add your regulatory registration details here, for example AMFI ARN, SEBI or IFSCA registration number, if applicable. Delete this line if not applicable.]\n\n# 3. Investment risk\nInvestments are subject to market risks, including the possible loss of principal. Past performance is not an indicator of future returns. Investments in foreign currency are also subject to exchange-rate risk. Please read all scheme-related and offer documents carefully before investing.\n\n# 4. Eligibility and jurisdiction\nThe Website is intended for persons who are legally permitted to access it. Certain products may be available only to specific categories of investors (for example accredited investors, residents or non-residents) and may be restricted in some jurisdictions. It is your responsibility to make sure that your use of the Website and any investment complies with the laws that apply to you, including exchange-control and tax rules.\n\n# 5. Accuracy of information\nWe try to keep the content accurate and current, but we do not guarantee that it is complete, accurate or up to date. Fund details, fees, thresholds, regulations and tax rules may change without notice. Information about third-party funds, asset managers and products belongs to those parties; please refer to their official documents for the final word.\n\n# 6. Third-party content and links\nThe Website may embed or link to third-party content, including presentations hosted on Canva, documents, videos and the websites of fund houses, regulators and others. We do not control, and are not responsible for, that content, its availability or the privacy practices of those sites. Names and logos of third parties belong to their owners and appear for identification only. No endorsement or affiliation is implied unless we say so.\n\n# 7. Intellectual property\nUnless stated otherwise, the content, design, text, graphics and code of the Website belong to Oak Sprouts or its licensors and are protected by applicable intellectual-property laws. You may view the Website and share links to it for personal, non-commercial use. You may not copy, republish, scrape, modify or commercially exploit the content without our written permission.\n\n# 8. Acceptable use\nYou agree not to:\n- use the Website unlawfully, or to commit fraud or misrepresentation;\n- try to gain unauthorised access to, disrupt or overload the Website or its systems;\n- submit false, misleading or another person's information through our forms;\n- use automated tools to extract data from the Website without permission; or\n- introduce viruses or other harmful code.\n\n# 9. Enquiries and forms\nWhen you submit a form you confirm that the information is accurate and that we may contact you about your enquiry. Submitting a form does not create an advisory, distribution or other client relationship; any such relationship will arise only under a separate written agreement. How we handle personal data is described in our Privacy Policy.\n\n# 10. Disclaimer of warranties\nThe Website and its content are provided \"as is\" and \"as available\", without warranties of any kind, express or implied, to the extent permitted by law. We do not warrant that the Website will be uninterrupted, secure or error free.\n\n# 11. Limitation of liability\nTo the fullest extent permitted by law, Oak Sprouts and its partners, directors, employees and agents will not be liable for any indirect, incidental, special or consequential loss, or for any loss of profit, data or investment value, arising from your use of, or reliance on, the Website or its content. Nothing in these Terms excludes liability that cannot be excluded by law.\n\n# 12. Indemnity\nYou agree to indemnify and hold harmless Oak Sprouts from claims, losses and expenses arising from your breach of these Terms or your misuse of the Website.\n\n# 13. Changes to the Website and these Terms\nWe may update the Website and these Terms from time to time. The \"Last updated\" date above shows the latest version. If you keep using the Website after a change, you accept the updated Terms.\n\n# 14. Governing law\nThese Terms are governed by the laws of India. Subject to applicable law, the courts at [Pune, Maharashtra] have exclusive jurisdiction over any dispute arising from them. [Please confirm the city and forum with your lawyer.]\n\n# 15. Contact us\nFor any question about these Terms, write to team.oaksprouts@gmail.com or use the Contact page."
+  },
+  {
+   "key": "privacy_text",
+   "value": "Last updated: 14 October 2026\n\nThis Privacy Policy explains how Oak Sprouts (\"we\", \"us\", \"our\"), which operates the giftcityinvesting website (the \"Website\"), collects, uses and protects your personal data. For the purposes of the Digital Personal Data Protection Act, 2023 and the rules made under it (together, the \"DPDP law\"), we act as the data fiduciary for the personal data collected through the Website.\n\n# 1. What we collect\n- Information you give us: your name, email address, phone number, the topic you are interested in, your accreditation route (if you apply) and the message you write in our contact or application forms.\n- Technical information: our hosting provider may process your IP address, browser type, device information and the pages you request in server logs, for security and performance.\n- Browser storage: to load faster, your browser keeps a saved copy of the Website's content (this is not your personal data) in its local storage. We do not currently use advertising or tracking cookies. If we add analytics or cookies later, we will update this policy.\nWe do not intentionally collect sensitive information such as PAN, Aadhaar, bank-account or card details through the Website. Please do not send them through our forms. If we need them, we will ask you through a secure channel.\n\n# 2. Why we use your data\n- To reply to your enquiry and guide you on funds, routes and accreditation.\n- To process an application that you choose to start.\n- To send you information you have asked for.\n- To keep the Website secure and to prevent misuse.\n- To comply with legal, regulatory and accounting obligations.\n- To understand what visitors find useful and improve our content.\n\n# 3. Consent\nWe process your personal data based on your consent, which you give by agreeing to this policy and submitting a form. You can withdraw your consent at any time by writing to us. Withdrawal does not affect processing done before it, and we may need to keep some data where the law requires.\n\n# 4. Who we share it with\n- Service providers that help us run the Website and store your enquiries, such as Google (Google Workspace, including Sheets and Apps Script), Cloudflare (hosting and security) and Canva (presentations you choose to view). They process data on our behalf and under their own security commitments.\n- Fund houses, asset managers, distributors or advisers, but only when you ask us to introduce you or process an application with them, or where you otherwise consent.\n- Courts, regulators and authorities, where the law requires.\nWe do not sell your personal data.\n\n# 5. Storage, transfers and retention\nOur service providers may store data on servers outside India. We keep enquiry data only for as long as needed for the purpose it was collected, to meet legal, regulatory or accounting needs, or until you ask us to delete it, subject to the law. [Add your retention period here, for example 24 months from your last enquiry.]\n\n# 6. Security\nWe use reasonable safeguards to protect your data, including restricted access to the sheets where enquiries are stored and encrypted (HTTPS) connections. No method of transmission over the internet is completely secure, so we cannot guarantee absolute security.\n\n# 7. Your rights\nUnder the DPDP law you may:\n- ask for a summary of the personal data we hold and how we process it;\n- ask us to correct, complete or update your data;\n- ask us to erase your data, subject to legal requirements;\n- withdraw your consent;\n- have your grievance addressed; and\n- nominate another person to exercise your rights if you die or become unable to do so.\nTo use any of these rights, write to the email address in section 11.\n\n# 8. Children\nThe Website is not meant for people under 18, and we do not knowingly collect personal data of children. If you believe a child has sent us data, please tell us and we will delete it.\n\n# 9. Third-party links and embeds\nThe Website links to and embeds third-party content (for example Canva presentations and fund-house websites). Those parties have their own privacy practices, which we do not control. Please read their policies.\n\n# 10. Changes to this policy\nWe may update this policy from time to time. The \"Last updated\" date above shows the latest version.\n\n# 11. Grievance and contact\nFor questions, requests or complaints about your personal data, contact our Grievance Officer: [Name of Grievance Officer], Oak Sprouts, 101, Aairah Terrazo,17, Shankar Sheth Road, Pune 411002. Email: team.oaksprouts@gmail.com. Phone: +91 77889 90390. We will respond within a reasonable period and in any case within the time required by law."
+  }
+ ],
+ "Stats": [
+  {
+   "label": "Years of GIFT City",
+   "value": 10,
+   "prefix": "",
+   "suffix": "+",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "label": "Funds available",
+   "value": 5,
+   "prefix": "",
+   "suffix": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "label": "Investment routes",
+   "value": 3,
+   "prefix": "",
+   "suffix": "",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "label": "Investors guided",
+   "value": 500,
+   "prefix": "",
+   "suffix": "+",
+   "order": 4,
+   "visible": "yes"
+  }
+ ],
+ "Socials": [
+  {
+   "name": "linkedin",
+   "url": "https://www.linkedin.com/"
+  },
+  {
+   "name": "x",
+   "url": "https://x.com/"
+  },
+  {
+   "name": "instagram",
+   "url": "https://www.instagram.com/"
+  },
+  {
+   "name": "facebook",
+   "url": "https://www.facebook.com/"
+  },
+  {
+   "name": "youtube",
+   "url": "https://www.youtube.com/"
+  },
+  {
+   "name": "discord",
+   "url": ""
+  },
+  {
+   "name": "blog",
+   "url": ""
+  }
+ ],
+ "Benefits": [
+  {
+   "audience": "Business",
+   "title": "Attractive tax regime",
+   "description": "Tax incentives for units operating in the IFSC, designed to be competitive globally.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "audience": "Business",
+   "title": "Single-window clearance",
+   "description": "Set up and operate with a streamlined approval process.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "audience": "Business",
+   "title": "World-class infrastructure",
+   "description": "Purpose-built district with plug-and-play offices and connectivity.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "audience": "Investors",
+   "title": "Global access",
+   "description": "Invest across geographies through a regulated international centre.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "audience": "Investors",
+   "title": "Currency flexibility",
+   "description": "Transact in foreign currency such as USD.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "audience": "Investors",
+   "title": "Tax efficiency",
+   "description": "Potential tax advantages depending on the route you choose.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "audience": "Banks",
+   "title": "IFSC Banking Units",
+   "description": "Offer international banking and treasury services from GIFT City.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "audience": "Banks",
+   "title": "Wider product shelf",
+   "description": "Access foreign currency lending, trade finance and more.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "audience": "Banks",
+   "title": "Regulatory clarity",
+   "description": "A single regulator brings clarity and speed.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "audience": "Funds",
+   "title": "Fund structures",
+   "description": "Set up and domicile funds in a globally recognised framework.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "audience": "Funds",
+   "title": "Global investor base",
+   "description": "Tap into foreign and NRI capital with simpler onboarding.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "audience": "Funds",
+   "title": "Cost-efficient operations",
+   "description": "Operate close to Indian talent and markets.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "audience": "Employees",
+   "title": "Global career paths",
+   "description": "Work with international teams in a modern financial district.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "audience": "Employees",
+   "title": "Growing talent pool",
+   "description": "Roles across funds, banking, fintech, legal and operations.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "audience": "Employees",
+   "title": "Live-work-play",
+   "description": "A smart city with offices, housing and amenities together.",
+   "order": 3,
+   "visible": "yes"
+  }
+ ],
+ "Timeline": [
+  {
+   "year": "2007",
+   "title": "The vision",
+   "description": "GIFT City is conceived as India's answer to global financial hubs.",
+   "visible": "yes"
+  },
+  {
+   "year": "2015",
+   "title": "First operations",
+   "description": "The first units begin operating as the city takes shape.",
+   "visible": "yes"
+  },
+  {
+   "year": "2020",
+   "title": "Unified regulator",
+   "description": "IFSCA is established as the single regulator for the IFSC.",
+   "visible": "yes"
+  },
+  {
+   "year": "2023",
+   "title": "Momentum builds",
+   "description": "Banks, funds, insurers and fintechs scale up their presence.",
+   "visible": "yes"
+  },
+  {
+   "year": "2026",
+   "title": "Today",
+   "description": "A growing global financial centre. Add your latest milestone here.",
+   "visible": "yes"
+  }
+ ],
+ "Funds": [
+  {
+   "id": "mirae",
+   "type": "inbound",
+   "name": "Mirae Asset",
+   "amc": "Mirae Asset",
+   "tagline": "Access India's growth, from GIFT City.",
+   "description": "Add a short description of this fund here.",
+   "category": "Equity",
+   "min_investment": "Update in sheet",
+   "risk": "Update in sheet",
+   "highlights": "Highlight one|Highlight two|Highlight three",
+   "presentation_url": "https://www.canva.com/design/REPLACE_ME/view",
+   "factsheet_url": "",
+   "accent": "indigo",
+   "show_in_carousel": "yes",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "id": "nj",
+   "type": "inbound",
+   "name": "NJ",
+   "amc": "NJ",
+   "tagline": "A simple route into Indian markets.",
+   "description": "Add a short description of this fund here.",
+   "category": "Equity",
+   "min_investment": "Update in sheet",
+   "risk": "Update in sheet",
+   "highlights": "Highlight one|Highlight two|Highlight three",
+   "presentation_url": "https://www.canva.com/design/REPLACE_ME/view",
+   "factsheet_url": "",
+   "accent": "teal",
+   "show_in_carousel": "yes",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "id": "tata",
+   "type": "inbound",
+   "name": "Tata",
+   "amc": "Tata",
+   "tagline": "India's trusted name, now in GIFT City.",
+   "description": "Add a short description of this fund here.",
+   "category": "Equity",
+   "min_investment": "Update in sheet",
+   "risk": "Update in sheet",
+   "highlights": "Highlight one|Highlight two|Highlight three",
+   "presentation_url": "https://www.canva.com/design/REPLACE_ME/view",
+   "factsheet_url": "",
+   "accent": "violet",
+   "show_in_carousel": "yes",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "id": "marcellus",
+   "type": "outbound",
+   "name": "Marcellus",
+   "amc": "Marcellus",
+   "tagline": "Quality-focused investing for the long term.",
+   "description": "Add a short description of this fund here.",
+   "category": "Global equity",
+   "min_investment": "Update in sheet",
+   "risk": "Update in sheet",
+   "highlights": "Highlight one|Highlight two|Highlight three",
+   "presentation_url": "https://www.canva.com/design/REPLACE_ME/view",
+   "factsheet_url": "",
+   "accent": "amber",
+   "show_in_carousel": "yes",
+   "order": 4,
+   "visible": "yes"
+  },
+  {
+   "id": "dsp",
+   "type": "outbound",
+   "name": "DSP",
+   "amc": "DSP",
+   "tagline": "Global diversification, made simple.",
+   "description": "Add a short description of this fund here.",
+   "category": "Global equity",
+   "min_investment": "Update in sheet",
+   "risk": "Update in sheet",
+   "highlights": "Highlight one|Highlight two|Highlight three",
+   "presentation_url": "https://www.canva.com/design/REPLACE_ME/view",
+   "factsheet_url": "",
+   "accent": "pink",
+   "show_in_carousel": "yes",
+   "order": 5,
+   "visible": "yes"
+  }
+ ],
+ "FAQ": [
+  {
+   "type": "inbound",
+   "question": "What are inbound funds?",
+   "answer": "Add your answer here.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "type": "inbound",
+   "question": "Who can invest?",
+   "answer": "Add your answer here.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "type": "inbound",
+   "question": "What is the minimum investment?",
+   "answer": "Add your answer here.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "type": "outbound",
+   "question": "What are outbound funds?",
+   "answer": "Add your answer here.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "type": "outbound",
+   "question": "How are outbound funds different from direct equity?",
+   "answer": "Add your answer here.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "type": "outbound",
+   "question": "What are the limits for sending money abroad?",
+   "answer": "Add your answer here.",
+   "order": 3,
+   "visible": "yes"
+  }
+ ],
+ "Presentations": [
+  {
+   "category": "GIFT City",
+   "title": "GIFT City",
+   "description": "What it is, who it is for and why it matters.",
+   "url": "https://www.canva.com/design/REPLACE_ME/view",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "category": "Global",
+   "title": "Why invest globally",
+   "description": "The case for diversifying beyond one market.",
+   "url": "https://www.canva.com/design/REPLACE_ME/view",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "category": "India",
+   "title": "Why invest in India",
+   "description": "The India growth story, in a few slides.",
+   "url": "https://www.canva.com/design/REPLACE_ME/view",
+   "order": 3,
+   "visible": "yes"
+  }
+ ],
+ "Accreditation_Page": [
+  {
+   "section": "stat",
+   "title": "Average reduction in ticket size",
+   "value": "30%+",
+   "description": "",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "section": "stat",
+   "title": "Certificate validity",
+   "value": "2 Yrs",
+   "description": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "section": "stat",
+   "title": "Business days",
+   "value": "3",
+   "description": "",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "section": "benefit",
+   "title": "Start small",
+   "value": "↑",
+   "description": "Enter SIF, PMS and AIF strategies at lower minimums, then scale allocation as conviction grows.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "section": "benefit",
+   "title": "Diversify freely",
+   "value": "◇",
+   "description": "Spread capital across multiple strategies and managers instead of concentrating in one product.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "section": "benefit",
+   "title": "Unbiased advice",
+   "value": "✓",
+   "description": "Get portfolio guidance built around your accreditation status, not a single product.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "section": "product",
+   "title": "SIF – Quant",
+   "value": "SIF",
+   "description": "",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "section": "product",
+   "title": "HSBC - RedHex",
+   "value": "SIF",
+   "description": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "section": "product",
+   "title": "Franklin Templeton - Sapphire",
+   "value": "SIF",
+   "description": "",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "section": "product",
+   "title": "Edelweiss MF - Altiva Hybrid",
+   "value": "SIF",
+   "description": "",
+   "order": 4,
+   "visible": "yes"
+  },
+  {
+   "section": "criteria",
+   "title": "Income criteria",
+   "value": "≥ ₹2 Cr",
+   "description": "Annual income, individually assessed",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "section": "criteria",
+   "title": "Net worth criteria",
+   "value": "≥ ₹7.5 Cr",
+   "description": "With at least ₹3.75 Cr held in financial assets",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "section": "criteria",
+   "title": "Combined criteria",
+   "value": "₹1 Cr + ₹5 Cr",
+   "description": "Annual income > ₹1 Cr and net worth > ₹5 Cr",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "section": "step",
+   "title": "Share your details",
+   "value": "",
+   "description": "Tell us a little about yourself so we can guide you towards the right eligibility route and prepare your application.",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "section": "step",
+   "title": "Submit your documents",
+   "value": "",
+   "description": "Upload soft copies of the documents required for the criteria you're qualifying under. We'll confirm the exact checklist upfront.",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "section": "step",
+   "title": "Pay & activate",
+   "value": "",
+   "description": "Pay the certification fee for a 2-year accreditation certificate. Most applications are approved within 3 business days.",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "section": "faq",
+   "title": "What is the Accredited Investor framework?",
+   "value": "",
+   "description": "It is SEBI's framework for recognising investors who meet defined income or net-worth thresholds, so they can take part in PMS, AIF and SIF products under a more flexible regime with lower minimum ticket sizes. (Draft answer: please review.)",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "section": "faq",
+   "title": "Who can become accredited?",
+   "value": "",
+   "description": "Individuals, HUFs, family trusts and sole proprietorships that meet any one of the criteria shown above: income, net worth, or the combined criteria. (Draft answer: please review.)",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "section": "faq",
+   "title": "How long does it take, and how long is the certificate valid?",
+   "value": "",
+   "description": "Applications are typically processed within 3 business days, and the accreditation certificate is valid for 2 years. (Draft answer: please review.)",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "section": "faq",
+   "title": "Which documents will I need?",
+   "value": "",
+   "description": "The documents depend on the criteria you qualify under. We confirm the exact checklist before you upload anything. (Draft answer: please review.)",
+   "order": 4,
+   "visible": "yes"
+  }
+ ],
+ "Insights": [
+  {
+   "date": "2026-09-01",
+   "title": "When the Rupee Falls, Is Your Portfolio Ready?",
+   "slug": "",
+   "category": "Global Investing",
+   "summary": "Persistent INR depreciation can erode global purchasing power, making currency diversification and USD-denominated investments increasingly relevant for long-term wealth preservation.",
+   "content": "A weaker rupee quietly reduces what your savings can buy abroad: overseas education, travel, healthcare and global investments.\n\n# Why currency matters\nWhen the rupee weakens against the US dollar, the same rupee amount buys fewer dollars. Over long periods this can erode global purchasing power, even while the rupee value of a portfolio is rising.\n\n# What investors can consider\n- Hold a portion of wealth in USD-denominated investments.\n- Match future foreign-currency expenses with assets in that currency.\n- Review global exposure at least once a year.\n\n> This is sample text. Replace it with your full article. The formatting guide is in the READ ME tab of the sheet.\n\n*Investments are subject to market risks. This article is for information only and is not investment advice.*",
+   "image": "",
+   "author": "Oak Sprouts",
+   "tags": "INR depreciation, global investing, USD investing",
+   "link": "",
+   "featured": "yes",
+   "visible": "yes"
+  },
+  {
+   "date": "2026-09-01",
+   "title": "Accredited Investor: The Gateway to New Investment Opportunities",
+   "slug": "",
+   "category": "Accredited Wealth",
+   "summary": "Accreditation can expand access to AIFs, PMS and angel investing opportunities while opening a broader investment universe for sophisticated investors.",
+   "content": "Accreditation can widen the set of investments open to you, often at lower minimum ticket sizes.\n\n# What changes after accreditation\n- Access to PMS, AIF and SIF strategies at lower entry points.\n- A broader universe of vetted managers and unlisted opportunities.\n- A certificate that stays valid for years.\n\nRead more about the process on our [accreditation page](/accreditation).\n\n*This is sample text. Replace it with your full article.*",
+   "image": "",
+   "author": "Oak Sprouts",
+   "tags": "accredited investor, AIF, PMS, SIF",
+   "link": "",
+   "featured": "no",
+   "visible": "yes"
+  },
+  {
+   "date": "2026-08-22",
+   "title": "The biggest risk in your portfolio may not be what you own.\nIt may be what you cannot own.",
+   "slug": "ai-global-opportunity-gap",
+   "category": "Investing Insights",
+   "summary": "AI is creating trillions in global value outside India. **GIFT City** opens access to global equities, technology giants, and US-dollar assets, helping Indian investors bridge the global opportunity gap.",
+   "content": "Many of the world's largest technology companies are not listed in India. For an investor who holds only Indian stocks, that is a gap in the portfolio.\n\n# Bridging the gap\n**GIFT City** gives Indian investors a regulated route to global equities and US-dollar assets.\n\n- Exposure to global technology leaders.\n- Diversification across markets and currencies.\n- A structure designed for international investing.\n\n*This is sample text. Replace it with your full article.*",
+   "image": "",
+   "author": "Oak Sprouts",
+   "tags": "global equities, GIFT City, technology stocks",
+   "link": "",
+   "featured": "no",
+   "visible": "yes"
+  }
+ ],
+ "Team": [
+  {
+   "name": "Team member one",
+   "role": "Founder",
+   "bio": "Add a short bio here.",
+   "photo": "",
+   "linkedin": "",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "name": "Team member two",
+   "role": "Investment advisor",
+   "bio": "Add a short bio here.",
+   "photo": "",
+   "linkedin": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "name": "Team member three",
+   "role": "Operations",
+   "bio": "Add a short bio here.",
+   "photo": "",
+   "linkedin": "",
+   "order": 3,
+   "visible": "yes"
+  }
+ ],
+ "Hashtags": [
+  {
+   "hashtag": "GIFT City",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "giftcity",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "giftcityinvesting",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "GIFT IFSC",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "IFSC",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "IFSCA",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "GIFT City funds",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "GIFT City investing",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "GIFT City tax benefits",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "invest in GIFT City",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "inbound funds",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "outbound funds",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "global investing",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "invest globally from India",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "international investing from India",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "USD investing",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "NRI investing",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "offshore funds India",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "accredited investor",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "SEBI accredited investor",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "AIF",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "PMS",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "SIF",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "India growth story",
+   "visible": "yes"
+  },
+  {
+   "hashtag": "diversify globally",
+   "visible": "yes"
+  }
+ ],
+ "SEO": [
+  {
+   "page": "home",
+   "title": "GIFT City Investing | India's Gateway to Global Finance",
+   "description": "Explore GIFT City: inbound and outbound funds, investment routes, tax benefits, accreditation and insights for investors, funds, banks and businesses."
+  },
+  {
+   "page": "inbound",
+   "title": "Inbound Funds in GIFT City | Invest in India from GIFT City",
+   "description": "Compare inbound funds in GIFT City, their tax benefits, investment routes and FAQs. Access the India growth story through a regulated structure."
+  },
+  {
+   "page": "outbound",
+   "title": "Outbound Funds in GIFT City | Invest Globally from India",
+   "description": "Compare outbound funds in GIFT City with direct equity. See tax benefits, investment routes and FAQs for investing globally from India."
+  },
+  {
+   "page": "presentations",
+   "title": "GIFT City & Fund Presentations | GIFT City Investing",
+   "description": "Watch short presentations on GIFT City, why invest globally, why invest in India and each fund."
+  },
+  {
+   "page": "accreditation",
+   "title": "SEBI Accredited Investor Programme | GIFT City Investing",
+   "description": "Check if you qualify as an accredited investor and apply. Access PMS, AIF and SIF strategies at lower minimums."
+  },
+  {
+   "page": "insights",
+   "title": "Insights & Blogs on GIFT City and Global Investing | GIFT City Investing",
+   "description": "Blogs, market notes and updates on GIFT City, global investing, accredited investing and Indian markets."
+  },
+  {
+   "page": "team",
+   "title": "Our Team | GIFT City Investing",
+   "description": "Meet the finance and investing professionals behind GIFT City Investing."
+  },
+  {
+   "page": "contact",
+   "title": "Contact Us | GIFT City Investing",
+   "description": "Talk to our team about funds, investment routes, tax benefits and accreditation."
+  }
+ ],
+ "Compare_Inbound": [
+  [
+   "Parameter",
+   "Mirae Asset",
+   "NJ",
+   "Tata"
+  ],
+  [
+   "Fund type",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Strategy",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Minimum investment",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Fees",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Common benefit 1",
+   "Merged across all three funds: type a benefit that is the same for every fund.",
+   "",
+   ""
+  ],
+  [
+   "Common benefit 2",
+   "Merged across all three funds: type another shared benefit.",
+   "",
+   ""
+  ],
+  [
+   "Returns (add period)",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Risk level",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Best suited for",
+   "—",
+   "—",
+   "—"
+  ]
+ ],
+ "Compare_Outbound": [
+  [
+   "Parameter",
+   "Marcellus",
+   "DSP",
+   "Direct equity"
+  ],
+  [
+   "Fund type",
+   "—",
+   "—",
+   "Self-directed stock investing"
+  ],
+  [
+   "Strategy",
+   "—",
+   "—",
+   "You pick and manage each stock"
+  ],
+  [
+   "Minimum investment",
+   "—",
+   "—",
+   "Depends on the stock and broker"
+  ],
+  [
+   "Diversification",
+   "—",
+   "—",
+   "Depends on your own portfolio"
+  ],
+  [
+   "Fees",
+   "—",
+   "—",
+   "Brokerage and other charges"
+  ],
+  [
+   "Shared fund benefit",
+   "Merged across the two funds: a benefit common to both funds.",
+   "",
+   "Not applicable"
+  ],
+  [
+   "Effort needed",
+   "Low",
+   "Low",
+   "High"
+  ],
+  [
+   "Returns (add period)",
+   "—",
+   "—",
+   "—"
+  ],
+  [
+   "Best suited for",
+   "—",
+   "—",
+   "—"
+  ]
+ ],
+ "Tax_Inbound": [
+  [
+   "Parameter",
+   "Benefits via GIFT City",
+   "Benefits via the traditional route"
+  ],
+  [
+   "Tax on capital gains",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Tax on income / dividends",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Withholding / repatriation",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Documentation",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Overall benefit",
+   "Merged across both columns if it is the same for both routes.",
+   ""
+  ]
+ ],
+ "Tax_Outbound": [
+  [
+   "Parameter",
+   "Benefits via GIFT City",
+   "Benefits via the traditional route"
+  ],
+  [
+   "Tax on capital gains",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Tax on income / dividends",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Remittance and reporting",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Documentation",
+   "Add details here.",
+   "Add details here."
+  ]
+ ],
+ "Routes_Inbound": [
+  [
+   "Parameter",
+   "Via GIFT City",
+   "Via the traditional route"
+  ],
+  [
+   "How it works",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Who can invest",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Currency",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Documents needed",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Time to start investing",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Minimum investment",
+   "Add details here.",
+   "Add details here."
+  ]
+ ],
+ "Routes_Outbound": [
+  [
+   "Parameter",
+   "Via GIFT City",
+   "Via the traditional route"
+  ],
+  [
+   "How it works",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Who can invest",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Currency",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Documents needed",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Limits and rules",
+   "Add details here.",
+   "Add details here."
+  ],
+  [
+   "Minimum investment",
+   "Add details here.",
+   "Add details here."
+  ]
+ ]
+}
