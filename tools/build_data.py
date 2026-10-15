@@ -234,6 +234,7 @@ Content = [
 
     ["contact_eyebrow", "Contact us"],
     ["contact_title", "Let's talk."],
+    ["contact_button", "Send message"],
     ["contact_subtitle", "Tell us what you are looking for and we will get back to you shortly."],
 
     ["terms_text", TERMS],
@@ -293,12 +294,40 @@ Timeline = [
 
 # ------------------------------------------------------------------ FUNDS
 Funds = [
-    ["id", "type", "name", "amc", "tagline", "description", "category", "min_investment", "risk", "highlights", "presentation_url", "factsheet_url", "accent", "show_in_carousel", "order", "visible"],
-    ["mirae", "inbound", "Mirae Asset", "Mirae Asset", "Access India's growth, from GIFT City.", "Add a short description of this fund here.", "Equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "indigo", "yes", 1, "yes"],
-    ["nj", "inbound", "NJ", "NJ", "A simple route into Indian markets.", "Add a short description of this fund here.", "Equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "teal", "yes", 2, "yes"],
-    ["tata", "inbound", "Tata", "Tata", "India's trusted name, now in GIFT City.", "Add a short description of this fund here.", "Equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "violet", "yes", 3, "yes"],
-    ["marcellus", "outbound", "Marcellus", "Marcellus", "Quality-focused investing for the long term.", "Add a short description of this fund here.", "Global equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "amber", "yes", 4, "yes"],
-    ["dsp", "outbound", "DSP", "DSP", "Global diversification, made simple.", "Add a short description of this fund here.", "Global equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "pink", "yes", 5, "yes"],
+    ["id", "type", "name", "amc", "tagline", "description", "category", "min_investment", "risk", "highlights", "presentation_url", "factsheet_url", "accent", "show_in_carousel", "order", "visible", "holdings_title", "holdings_display"],
+    ["mirae", "inbound", "Mirae Asset", "Mirae Asset", "Access India's growth, from GIFT City.", "Add a short description of this fund here.", "Equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "indigo", "yes", 1, "yes", "", "both"],
+    ["nj", "inbound", "NJ", "NJ", "A simple route into Indian markets.", "Add a short description of this fund here.", "Equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "teal", "yes", 2, "yes", "", "both"],
+    ["tata", "inbound", "Tata", "Tata", "India's trusted name, now in GIFT City.", "Add a short description of this fund here.", "Equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "violet", "yes", 3, "yes", "", "both"],
+    ["marcellus", "outbound", "Marcellus", "Marcellus", "Quality-focused investing for the long term.", "Add a short description of this fund here.", "Global equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "amber", "yes", 4, "yes", "Top 5 holdings", "both"],
+    ["dsp", "outbound", "DSP", "DSP", "Global diversification, made simple.", "Add a short description of this fund here.", "Global equity", "Update in sheet", "Update in sheet", "Highlight one|Highlight two|Highlight three", PH, "", "pink", "yes", 5, "yes", "", "both"],
+]
+
+# ------------------------------------------------------------- HOLDINGS
+# fund = the Funds tab id. logo = Google Drive share link or image URL (optional: initials show if blank).
+Holdings = [
+    ["fund", "name", "logo", "order", "visible"],
+    ["marcellus", "Netflix", "", 1, "yes"],
+    ["marcellus", "Amazon", "", 2, "yes"],
+    ["marcellus", "Apple", "", 3, "yes"],
+    ["marcellus", "Meta", "", 4, "yes"],
+    ["marcellus", "Nvidia", "", 5, "yes"],
+]
+
+# ---------------------------------------------------------- FORM FIELDS
+# form = contact or accreditation. type = text, email, tel, number, date, select, textarea.
+# options = for select only, separated by |. width = half or full. required = yes/no.
+Form_Fields = [
+    ["form", "label", "type", "options", "required", "width", "placeholder", "order", "visible"],
+    ["contact", "Name", "text", "", "yes", "half", "", 1, "yes"],
+    ["contact", "Email", "email", "", "yes", "half", "", 2, "yes"],
+    ["contact", "Phone", "tel", "", "no", "half", "", 3, "yes"],
+    ["contact", "Interested in", "select", "Inbound funds|Outbound funds|Accreditation|GIFT City setup|Something else", "yes", "half", "", 4, "yes"],
+    ["contact", "Message", "textarea", "", "yes", "full", "", 5, "yes"],
+    ["accreditation", "Name", "text", "", "yes", "half", "", 1, "yes"],
+    ["accreditation", "Email", "email", "", "yes", "half", "", 2, "yes"],
+    ["accreditation", "Phone", "tel", "", "no", "half", "", 3, "yes"],
+    ["accreditation", "Route / criteria", "select", "Individual or family office|Fund manager or AMC|Bank or financial institution|Corporate or business|Not sure yet", "yes", "half", "Route you may qualify under", 4, "yes"],
+    ["accreditation", "Message", "textarea", "", "no", "full", "", 5, "yes"],
 ]
 
 # ------------------------------------------------ COMPARISON-STYLE TABS (grids)
@@ -556,6 +585,8 @@ SHEETS = {
     "Benefits": (Benefits[0], Benefits[1:]),
     "Timeline": (Timeline[0], Timeline[1:]),
     "Funds": (Funds[0], Funds[1:]),
+    "Holdings": (Holdings[0], Holdings[1:]),
+    "Form_Fields": (Form_Fields[0], Form_Fields[1:]),
     "FAQ": (FAQ[0], FAQ[1:]),
     "Presentations": (Presentations[0], Presentations[1:]),
     "Accreditation_Page": (Accreditation_Page[0], Accreditation_Page[1:]),
@@ -565,10 +596,10 @@ SHEETS = {
     "SEO": (SEO[0], SEO[1:]),
 }
 # order of tabs in the workbook
-TAB_ORDER = ["Settings", "Content", "Stats", "Socials", "Benefits", "Timeline", "Funds",
+TAB_ORDER = ["Settings", "Content", "Stats", "Socials", "Benefits", "Timeline", "Funds", "Holdings",
              "Compare_Inbound", "Compare_Outbound", "Tax_Inbound", "Tax_Outbound",
              "Routes_Inbound", "Routes_Outbound", "FAQ", "Presentations", "Accreditation_Page",
-             "Insights", "Team", "Hashtags", "SEO"]
+             "Insights", "Team", "Form_Fields", "Hashtags", "SEO"]
 
 
 def to_json():
