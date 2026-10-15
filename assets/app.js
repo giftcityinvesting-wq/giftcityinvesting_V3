@@ -235,8 +235,36 @@ const logoMark = cls => `<span class="mark ${cls || ''}"><i></i><i></i><i></i><i
 function logoHTML(where) {
   const u = S(where === 'nav' ? 'logo_nav' : 'logo_footer');
   const name = `<span>${esc(siteName())}</span>`;
-  if (u) return imgTag(u, siteName(), 'logo-img ' + where, 600, true) + (/^(yes|true|1)$/i.test(S('logo_show_name')) ? name : '');
+  if (u) return imgTag(u, siteName(), 'logo-img lg-' + where, 600, true) + (/^(yes|true|1)$/i.test(S('logo_show_name')) ? name : '');
   return logoMark(where === 'footer' ? 'lg' : '') + name;
+}
+/* Logos often come with big empty (transparent or white) margins, which pushes the image away from the text.
+   Crop the margins in the browser so the logo always sits tight and aligned. Needs a CORS-readable image; otherwise it is left as is. */
+function trimLogos() {
+  $$('img.logo-img').forEach(img => {
+    if (img.dataset.trim) return; img.dataset.trim = '1';
+    const src = img.getAttribute('src'); if (!src || /^data:/.test(src)) return;
+    const t = new Image(); t.crossOrigin = 'anonymous';
+    t.onload = () => {
+      try {
+        const k = Math.min(1, 700 / Math.max(t.naturalWidth, t.naturalHeight)), w = Math.max(1, Math.round(t.naturalWidth * k)), h = Math.max(1, Math.round(t.naturalHeight * k));
+        const c = document.createElement('canvas'); c.width = w; c.height = h;
+        const x = c.getContext('2d', { willReadFrequently: true }); x.drawImage(t, 0, 0, w, h);
+        const d = x.getImageData(0, 0, w, h).data, px = (i) => [d[i], d[i + 1], d[i + 2], d[i + 3]];
+        const bg = px(0), solid = bg[3] > 200;
+        const isBg = i => solid ? (Math.abs(d[i] - bg[0]) + Math.abs(d[i + 1] - bg[1]) + Math.abs(d[i + 2] - bg[2]) < 40) : d[i + 3] < 20;
+        let x0 = w, x1 = -1, y0 = h, y1 = -1;
+        for (let yy = 0; yy < h; yy++) for (let xx = 0; xx < w; xx++) if (!isBg((yy * w + xx) * 4)) { if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (yy < y0) y0 = yy; if (yy > y1) y1 = yy; }
+        if (x1 < 0) return;
+        const cw = x1 - x0 + 1, ch = y1 - y0 + 1;
+        if (cw > w * .96 && ch > h * .96) return;               // nothing worth trimming
+        const o = document.createElement('canvas'); o.width = cw; o.height = ch;
+        o.getContext('2d').drawImage(c, x0, y0, cw, ch, 0, 0, cw, ch);
+        img.src = o.toDataURL('image/png');
+      } catch (e) { /* image not readable from the browser: keep original */ }
+    };
+    t.src = src;
+  });
 }
 function head(eyebrow, title, sub, center) {
   return `<div class="head ${center ? 'center' : ''} reveal"><span class="eyebrow">${esc(eyebrow)}</span><h2 class="h2">${inline(title)}</h2>${sub ? `<p class="lead">${inline(sub)}</p>` : ''}</div>`;
@@ -407,7 +435,7 @@ function tabBody(type, tab) {
         <div class="top a-${accent(f.accent, i)}"><span>${esc(f.amc)}</span><h3>${esc(f.name)}</h3></div>
         <div class="body"><p><strong>${esc(f.tagline)}</strong></p>
           <div class="metrics"><div><b>${esc(f.category)}</b><small>Category</small></div><div><b>${esc(f.min_investment)}</b><small>Minimum</small></div><div><b>${esc(f.risk)}</b><small>Risk</small></div></div>
-          <ul class="hl">${String(f.highlights || '').split('|').filter(x => x.trim()).map(h => `<li>${esc(h.trim())}</li>`).join('')}</ul>
+    <ul class="hl">${String(f.highlights || '').split('|').filter(x => x.trim()).map(h => `<li>${esc(h.trim())}</li>`).join('')}</ul>
           <div class="acts"><button class="btn btn-light btn-sm" data-fund="${esc(f.id)}">Details</button>
             ${isPH(f.presentation_url) ? '' : `<button class="btn btn-primary btn-sm" data-pres="${esc(f.presentation_url)}" data-title="${esc(f.name)}">Presentation</button>`}
             ${f.factsheet_url ? `<a class="btn btn-light btn-sm" target="_blank" rel="noopener" href="${esc(safeUrl(f.factsheet_url))}">Factsheet</a>` : ''}</div></div></article>`).join('')}</div></div>`;
@@ -494,11 +522,7 @@ pages.accreditation = () => {
       <div class="apply-l"><span class="eyebrow">${esc(C('acc_final_eyebrow'))}</span><h2 class="h2">${inline(C('acc_final_title'))}</h2>
         <h3 style="margin-top:26px">${esc(C('acc_form_title'))}</h3><p>${inline(C('acc_form_text'))}</p></div>
       <form class="form" data-lead="accreditation">
-        <div class="row2"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div>
-        <div class="row2"><label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
-          <label>Route you may qualify under<select name="route">${crit.map(c => `<option>${esc(c.title)}</option>`).join('')}<option>Not sure yet</option></select></label></div>
-        <input type="hidden" name="interest" value="Accreditation">
-        <label>Message (optional)<textarea name="message" style="min-height:90px"></textarea></label>
+        ${formFieldsHTML("accreditation")}
         ${hp}${consent()}
         <button class="btn btn-primary" type="submit" style="justify-content:center">${esc(C('acc_cta_label', 'Begin your application'))}</button>
       </form>
@@ -567,6 +591,35 @@ function article(slug) {
 }
 pages.insights = sub => (sub ? (article(sub) || pages.notfound()) : insightsList());
 
+
+/* ----- sheet-driven forms (Form_Fields tab): add, remove, rename fields and edit dropdown options from the sheet ----- */
+const FIELD_TYPES = ['text', 'email', 'tel', 'number', 'date', 'select', 'textarea'];
+function fieldHTML(f) {
+  const label = String(f.label || '').trim(); if (!label) return '';
+  let type = String(f.type || 'text').trim().toLowerCase(); if (!FIELD_TYPES.includes(type)) type = 'text';
+  const req = on(f.required) ? ' required' : '', ph = f.placeholder ? ` placeholder="${esc(f.placeholder)}"` : '';
+  const nm = `name="${esc(label)}"`, lc = label.toLowerCase();
+  const ac = type === 'email' ? 'email' : type === 'tel' ? 'tel' : /^(full )?name$/.test(lc) ? 'name' : 'off';
+  let ctl;
+  if (type === 'select') {
+    const opts = String(f.options || '').split('|').map(x => x.trim()).filter(Boolean);
+    ctl = `<select ${nm}${req}>${f.placeholder ? `<option value="">${esc(f.placeholder)}</option>` : ''}${opts.map(o => `<option>${esc(o)}</option>`).join('')}</select>`;
+  } else if (type === 'textarea') ctl = `<textarea ${nm}${req}${ph}></textarea>`;
+  else ctl = `<input ${nm} type="${type}"${req}${ph} autocomplete="${ac}">`;
+  return `<label>${esc(label)}${ctl}</label>`;
+}
+function formFieldsHTML(form) {
+  const rows = list('Form_Fields').filter(r => String(r.form || '').trim().toLowerCase() === form && String(r.label || '').trim());
+  const out = []; let pend = null;
+  rows.forEach(r => {
+    const half = /^half$/i.test(String(r.width || '').trim()) && String(r.type || '').toLowerCase() !== 'textarea';
+    if (half) { if (pend) { out.push(`<div class="row2">${pend}${fieldHTML(r)}</div>`); pend = null; } else pend = fieldHTML(r); }
+    else { if (pend) { out.push(pend); pend = null; } out.push(fieldHTML(r)); }
+  });
+  if (pend) out.push(pend);
+  return out.join('');
+}
+
 /* ----- team, contact, legal ----- */
 pages.team = () => `${pageHero('team')}<section class="sec" style="padding-top:70px"><div class="wrap"><div class="cards team">
   ${list('Team').map((m, i) => `<div class="card person reveal" style="--i:${i % 3}">
@@ -585,12 +638,9 @@ pages.contact = () => {
       ${S('address') ? `<a class="ci" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(S('address'))}"><span class="ic">${ICON.pin}</span><span><small>Visit us</small><b>${esc(S('address'))}</b></span></a>` : ''}
     </div>
     <form class="form reveal" style="--i:2" data-lead="contact">
-      <div class="row2"><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div>
-      <div class="row2"><label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
-        <label>I am interested in<select name="interest"><option>Inbound funds</option><option>Outbound funds</option><option>Accreditation</option><option>GIFT City setup</option><option>Something else</option></select></label></div>
-      <label>Message<textarea name="message" required></textarea></label>
+      ${formFieldsHTML("contact")}
       ${hp}${consent()}
-      <button class="btn btn-primary" type="submit" style="justify-content:center">Send message</button>
+      <button class="btn btn-primary" type="submit" style="justify-content:center">${esc(C('contact_button', 'Send message'))}</button>
     </form></div></section>`;
 };
 const legal = (title, key) => () => `<section class="phero dark">${orbs}<div class="wrap"><h1 class="h1" style="font-size:clamp(38px,6vw,72px)">${title}</h1></div></section>
@@ -605,7 +655,7 @@ pages.notfound = () => `<section class="phero dark" style="min-height:70vh;displ
    CHROME: nav, footer, favicon
    ===================================================================== */
 function renderChrome() {
-  $('.brand').innerHTML = logoHTML('nav');
+  $('.brand').innerHTML = logoHTML('nav'); setTimeout(trimLogos, 0);
   $('#navlinks').innerHTML = NAV.map(n => `<a href="${n[2]}" data-nav="${n[0]}">${n[1]}</a>`).join('') + `<a href="/contact" data-nav="contact" class="m-only">Contact</a>`;
   const an = $('#announce'); if (S('announcement')) { an.hidden = false; an.textContent = S('announcement'); } else an.hidden = true;
   if (S('favicon')) $$('link[rel~="icon"]').forEach((l, i) => { if (i === 0) { l.href = imgUrl(S('favicon'), 256); l.removeAttribute('type'); l.removeAttribute('sizes'); } else l.remove(); });
@@ -743,12 +793,24 @@ function openPresentation(url, title) {
   openModal(`<div class="embed"><iframe src="${esc(src)}" allowfullscreen loading="lazy" allow="fullscreen"></iframe></div>
     <div class="mbar"><b>${esc(title)}</b><a class="btn btn-light btn-sm" target="_blank" rel="noopener" href="${esc(open)}">Open in a new tab ${ICON.arrow}</a></div>`, true);
 }
+function holdingsHTML(f) {
+  const id = String(f.id || '').trim().toLowerCase();
+  const rows = list('Holdings').filter(h => String(h.fund || '').trim().toLowerCase() === id && String(h.name || '').trim());
+  if (!rows.length) return '';
+  const m = String(f.holdings_display || 'both').trim().toLowerCase();
+  const mode = /^logo/.test(m) ? 'logos' : /^name/.test(m) ? 'names' : 'both';
+  const title = String(f.holdings_title || '').trim() || 'Top holdings';
+  return `<div class="holdings"><h4>${esc(title)}</h4><div class="hold-grid hold-${mode}">${rows.map(h => `<div class="hold" title="${esc(h.name)}">
+    ${mode === 'names' ? '' : `<span class="hold-logo"><em>${esc(initials(h.name))}</em>${h.logo ? imgTag(h.logo, h.name, '', 200) : ''}</span>`}
+    ${mode === 'logos' ? `<span class="sr">${esc(h.name)}</span>` : `<b>${esc(h.name)}</b>`}</div>`).join('')}</div></div>`;
+}
 function openFund(id) {
   const f = list('Funds').find(x => x.id === id); if (!f) return;
   const i = list('Funds').indexOf(f);
   openModal(`<div class="mpad"><div class="top a-${accent(f.accent, i)}"><span class="chip">${esc(f.type)} fund · ${esc(f.amc)}</span><h3 style="margin-top:14px">${esc(f.name)}</h3><p style="opacity:.9">${esc(f.tagline)}</p></div>
     <p class="lead" style="font-size:19px">${inline(f.description)}</p>
     <div class="metrics" style="margin:26px 0"><div><b>${esc(f.category)}</b><small>Category</small></div><div><b>${esc(f.min_investment)}</b><small>Minimum</small></div><div><b>${esc(f.risk)}</b><small>Risk</small></div></div>
+    ${holdingsHTML(f)}
     <ul class="hl">${String(f.highlights || '').split('|').filter(x => x.trim()).map(h => `<li>${esc(h.trim())}</li>`).join('')}</ul>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px">
       ${isPH(f.presentation_url) ? '' : `<button class="btn btn-primary" data-pres="${esc(f.presentation_url)}" data-title="${esc(f.name)}">Watch presentation</button>`}
@@ -761,7 +823,7 @@ document.addEventListener('error', e => {
   if (t.dataset.did && !t.dataset.alt) { t.dataset.alt = '1'; t.src = `https://lh3.googleusercontent.com/d/${t.dataset.did}=w1400`; return; }
   if (t.classList.contains('logo-img')) {
     const w = document.createElement('span');
-    w.innerHTML = logoMark(t.classList.contains('footer') ? 'lg' : '') + `<span>${esc(siteName())}</span>`;
+    w.innerHTML = logoMark(t.classList.contains('lg-footer') ? 'lg' : '') + `<span>${esc(siteName())}</span>`;
     t.replaceWith(...w.childNodes); return;
   }
   t.style.display = 'none'; t.classList.add('broken');
@@ -807,7 +869,7 @@ document.addEventListener('submit', async e => {
   e.preventDefault();
   const d = Object.fromEntries(new FormData(f));
   if (d.website) return;                       // honeypot: bots fill this, humans never see it
-  delete d.website; d.source = f.dataset.lead; d.page = location.pathname; d.consent = d.consent ? 'yes' : '';
+  delete d.website; d.Source = f.dataset.lead; d.Page = location.pathname; d.Consent = d.consent ? 'yes' : ''; delete d.consent;
   const ep = S('form_endpoint'), btn = $('button[type=submit]', f), label = btn.textContent;
   if (ep) {
     btn.disabled = true; btn.textContent = 'Sending…';
@@ -820,8 +882,9 @@ document.addEventListener('submit', async e => {
     } catch { toast('Sorry, we could not send that. Please email or call us directly.'); }
     btn.disabled = false; btn.textContent = label;
   } else {
-    const body = Object.entries(d).filter(([k, v]) => v && !['source', 'page', 'consent'].includes(k)).map(([k, v]) => `${k}: ${v}`).join('\n');
-    location.href = `mailto:${S('email')}?subject=${encodeURIComponent('Enquiry: ' + (d.interest || d.source))}&body=${encodeURIComponent(body)}`;
+    const body = Object.entries(d).filter(([k, v]) => v && !['Source', 'Page', 'Consent'].includes(k)).map(([k, v]) => `${k}: ${v}`).join('\n');
+    const sel = $('select', f);
+    location.href = `mailto:${S('email')}?subject=${encodeURIComponent('Enquiry: ' + ((sel && sel.value) || d.Source))}&body=${encodeURIComponent(body)}`;
   }
 });
 
