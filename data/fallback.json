@@ -339,6 +339,10 @@
    "value": "Let's talk."
   },
   {
+   "key": "contact_button",
+   "value": "Send message"
+  },
+  {
    "key": "contact_subtitle",
    "value": "Tell us what you are looking for and we will get back to you shortly."
   },
@@ -571,7 +575,9 @@
    "accent": "indigo",
    "show_in_carousel": "yes",
    "order": 1,
-   "visible": "yes"
+   "visible": "yes",
+   "holdings_title": "",
+   "holdings_display": "both"
   },
   {
    "id": "nj",
@@ -589,7 +595,9 @@
    "accent": "teal",
    "show_in_carousel": "yes",
    "order": 2,
-   "visible": "yes"
+   "visible": "yes",
+   "holdings_title": "",
+   "holdings_display": "both"
   },
   {
    "id": "tata",
@@ -607,7 +615,9 @@
    "accent": "violet",
    "show_in_carousel": "yes",
    "order": 3,
-   "visible": "yes"
+   "visible": "yes",
+   "holdings_title": "",
+   "holdings_display": "both"
   },
   {
    "id": "marcellus",
@@ -625,7 +635,9 @@
    "accent": "amber",
    "show_in_carousel": "yes",
    "order": 4,
-   "visible": "yes"
+   "visible": "yes",
+   "holdings_title": "Top 5 holdings",
+   "holdings_display": "both"
   },
   {
    "id": "dsp",
@@ -642,6 +654,157 @@
    "factsheet_url": "",
    "accent": "pink",
    "show_in_carousel": "yes",
+   "order": 5,
+   "visible": "yes",
+   "holdings_title": "",
+   "holdings_display": "both"
+  }
+ ],
+ "Holdings": [
+  {
+   "fund": "marcellus",
+   "name": "Netflix",
+   "logo": "",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "fund": "marcellus",
+   "name": "Amazon",
+   "logo": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "fund": "marcellus",
+   "name": "Apple",
+   "logo": "",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "fund": "marcellus",
+   "name": "Meta",
+   "logo": "",
+   "order": 4,
+   "visible": "yes"
+  },
+  {
+   "fund": "marcellus",
+   "name": "Nvidia",
+   "logo": "",
+   "order": 5,
+   "visible": "yes"
+  }
+ ],
+ "Form_Fields": [
+  {
+   "form": "contact",
+   "label": "Name",
+   "type": "text",
+   "options": "",
+   "required": "yes",
+   "width": "half",
+   "placeholder": "",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "form": "contact",
+   "label": "Email",
+   "type": "email",
+   "options": "",
+   "required": "yes",
+   "width": "half",
+   "placeholder": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "form": "contact",
+   "label": "Phone",
+   "type": "tel",
+   "options": "",
+   "required": "no",
+   "width": "half",
+   "placeholder": "",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "form": "contact",
+   "label": "Interested in",
+   "type": "select",
+   "options": "Inbound funds|Outbound funds|Accreditation|GIFT City setup|Something else",
+   "required": "yes",
+   "width": "half",
+   "placeholder": "",
+   "order": 4,
+   "visible": "yes"
+  },
+  {
+   "form": "contact",
+   "label": "Message",
+   "type": "textarea",
+   "options": "",
+   "required": "yes",
+   "width": "full",
+   "placeholder": "",
+   "order": 5,
+   "visible": "yes"
+  },
+  {
+   "form": "accreditation",
+   "label": "Name",
+   "type": "text",
+   "options": "",
+   "required": "yes",
+   "width": "half",
+   "placeholder": "",
+   "order": 1,
+   "visible": "yes"
+  },
+  {
+   "form": "accreditation",
+   "label": "Email",
+   "type": "email",
+   "options": "",
+   "required": "yes",
+   "width": "half",
+   "placeholder": "",
+   "order": 2,
+   "visible": "yes"
+  },
+  {
+   "form": "accreditation",
+   "label": "Phone",
+   "type": "tel",
+   "options": "",
+   "required": "no",
+   "width": "half",
+   "placeholder": "",
+   "order": 3,
+   "visible": "yes"
+  },
+  {
+   "form": "accreditation",
+   "label": "Route / criteria",
+   "type": "select",
+   "options": "Individual or family office|Fund manager or AMC|Bank or financial institution|Corporate or business|Not sure yet",
+   "required": "yes",
+   "width": "half",
+   "placeholder": "Route you may qualify under",
+   "order": 4,
+   "visible": "yes"
+  },
+  {
+   "form": "accreditation",
+   "label": "Message",
+   "type": "textarea",
+   "options": "",
+   "required": "no",
+   "width": "full",
+   "placeholder": "",
    "order": 5,
    "visible": "yes"
   }
