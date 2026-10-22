@@ -1,6 +1,6 @@
 {
   // IMPORTANT: "name" must be exactly the name of your Worker in Cloudflare (Workers & Pages > your project).
-  "name": "giftcityinvesting-v3.giftcityinvesting.workers.dev",
+  "name": "   "name": "giftcityinvesting-v3",",
   "compatibility_date": "2025-09-01",
   "assets": {
     "directory": "./",
