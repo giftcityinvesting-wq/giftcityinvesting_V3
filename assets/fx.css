@@ -1,0 +1,31 @@
+/* Motion & touch layer. Tokens from the animate skill; hover effects gated; reduced motion respected. */
+:root{--ease-out:cubic-bezier(.23,1,.32,1);--ease-drawer:cubic-bezier(.32,.72,0,1)}
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+input,textarea,select{font-size:16px}
+button,a,[role=button]{touch-action:manipulation}
+.hero{min-height:100svh}
+.nav-inner{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+.navlinks{padding-bottom:max(40px,env(safe-area-inset-bottom))}
+.btn:active,.nav-cta:active,.burger:active{transform:scale(.97);transition:transform .12s var(--ease-out)}
+.hero canvas.fx-net,.phero canvas.fx-net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.grad-text{background-size:220% 100%;animation:fxShine 8s ease-in-out infinite alternate}
+@keyframes fxShine{to{background-position:100% 0}}
+.nav{transition:transform .3s var(--ease-out)}
+.nav.fx-hide{transform:translateY(-100%)}
+.navlinks a{transition:color .2s ease,background .2s ease}
+.navlinks.open a{animation:fxIn .3s var(--ease-out) both;animation-delay:calc(var(--k,0)*45ms)}
+@keyframes fxIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#main>*{animation:fxPage .35s var(--ease-out) both}
+@keyframes fxPage{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){
+  .fx-tilt{transition:transform .2s var(--ease-out),box-shadow .25s ease!important;transition-delay:0s!important}
+  .fx-tilt.fx-hot{box-shadow:0 28px 56px -22px rgba(91,108,255,.4)}
+  .fx-mag{transition:transform .2s var(--ease-out)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  canvas.fx-net{display:none}
+  .grad-text,.navlinks.open a{animation:none}
+  #main>*{animation:fxFade .2s ease both}
+  @keyframes fxFade{from{opacity:0}to{opacity:1}}
+  .fx-tilt,.fx-mag{transform:none!important}
+}
